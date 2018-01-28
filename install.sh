@@ -5,7 +5,7 @@ if [ -f /etc/alpine-release ] ; then
   apk update && apk add curl duplicity openssl bash && \
   rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
 elif [ -f /etc/debian_version ] ; then
-  apt-get update && apt-get -y install curl duplicity python-boto openssl librsync-dev && \
+  apt-get update && apt-get -y install curl python-boto openssl librsync-dev && \
   pip install duplicity && \
   apt-get remove --purge && rm -Rf /var/lib/apt/lists/* /root/.cache
 fi
